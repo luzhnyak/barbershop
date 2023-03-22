@@ -5,51 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbersop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section -->
-    <header>
-      <a href="">
-        <img src="./images/header/logo.svg" alt="BarberShop logo" />
-      </a>
-      <nav>
-        <ul>
-          <li><a href="#about">Abaut</a></li>
-          <li><a href="#price">Servises and prices</a></li>
-          <li><a href="#team">Barbers</a></li>
-          <li><a href="#contacts">Contacts</a></li>
+    <header class="page-header">
+      <nav class="page-nav">
+        <a href="logo">
+          <img
+            class="logo-img"
+            src="./images/header/logo.svg"
+            alt="BarberShop logo"
+            width="76"
+            height="76"
+          />
+        </a>
+
+        <ul class="menu list">
+          <li class="menu-item"><a class="menu-link" href="#about">Abaut</a></li>
+          <li class="menu-item"><a class="menu-link" href="#price">Servises and prices</a></li>
+          <li class="menu-item"><a class="menu-link" href="#team">Barbers</a></li>
+          <li class="menu-item"><a class="menu-link" href="#contacts">Contacts</a></li>
         </ul>
-        <a href="tel:+380441111111">+38 044 111 11 11</a>
-        <button type="button">Online-booking</button>
+        <a class="contact-phone" href="tel:+380441111111">+38 044 111 11 11</a>
+        <button class="modal-btn" type="button">Online-booking</button>
       </nav>
     </header>
     <main>
       <!-- Hero section -->
-      <section>
-        <ul>
-          <li>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </li>
-          <li>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a>
-          </li>
-        </ul>
-        <p>A hair salon for men in Kyiv</p>
-        <h1>BarberShop</h1>
-        <p>We are experts in trendy men's haircuts. We work quickly, carefully and with style.</p>
-        <!-- Slider controls -->
-        <ul>
-          <li>
-            <button type="button">Back</button>
-          </li>
-          <li>
-            <button type="button">Forward</button>
-          </li>
-        </ul>
+      <section class="hero">
+        <div class="hero-left-side">
+          <ul class="media-list list">
+            <li class="media-list-item">
+              <a
+                class="media-list-link"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+            </li>
+            <li class="media-list-item">
+              <a
+                class="media-list-link"
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Youtube</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="hero-right-side">
+          <p class="suptitle">A hair salon for men in Kyiv</p>
+          <h1 class="main-title">BarberShop</h1>
+          <p class="section-description">
+            We are experts in trendy men's haircuts. We work quickly, carefully and with style.
+          </p>
+          <!-- Slider controls -->
+          <ul class="list">
+            <li>
+              <button type="button">Back</button>
+            </li>
+            <li>
+              <button type="button">Forward</button>
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- About section -->
       <section id="about">
-        <ul>
+        <ul class="list">
           <li><img src="./images/about/img-1.jpg" alt="Beard trim" width="270" height="445" /></li>
           <li>
             <img
@@ -60,9 +94,11 @@
             />
           </li>
         </ul>
-        <p>About</p>
-        <h2>Best Barbershop in your city</h2>
-        <p>If you want to add more confidence to your image, you should visit us.</p>
+        <p class="suptitle">About</p>
+        <h2 class="section-title">Best Barbershop in your city</h2>
+        <p class="section-description">
+          If you want to add more confidence to your image, you should visit us.
+        </p>
         <p>
           We are a team that never stops at what has been achieved and are thirsty for changes. And
           when you fall into the hands of our master, you will never be the same again. We are a
@@ -73,8 +109,8 @@
       </section>
       <!-- Price section -->
       <section id="price">
-        <p>Spend your time with the best masters</p>
-        <h2>Services and prices</h2>
+        <p class="suptitle">Spend your time with the best masters</p>
+        <h2 class="section-title">Services and prices</h2>
         <table>
           <tr>
             <td>Men’s haircut</td>
@@ -116,9 +152,9 @@
       </section>
       <!-- Benefits section -->
       <section>
-        <p>Old traditional school</p>
-        <h2>Why people come to us?</h2>
-        <p>
+        <p class="suptitle">Old traditional school</p>
+        <h2 class="section-title">Why people come to us?</h2>
+        <p class="section-description">
           Only good things are said about us. But it's better to see and feel 1 time than read 10
           times.
         </p>
@@ -135,9 +171,9 @@
       </section>
       <!-- Team section -->
       <section id="team">
-        <p>For true enjoyers of the atmosphere</p>
-        <h2>Our barbers</h2>
-        <ul>
+        <p class="suptitle">For true enjoyers of the atmosphere</p>
+        <h2 class="section-title">Our barbers</h2>
+        <ul class="list">
           <li>
             <img src="./images/team/john_smith.jpg" alt="John Smith" width="370" height="346" />
             <h3>John Smith</h3>
@@ -159,7 +195,7 @@
       <!-- Gallery section -->
       <section>
         <p>In Latin, "barba" means "beard"</p>
-        <ul>
+        <ul class="list">
           <li><img src="./images/gallery/img-1.jpg" alt="" width="270" height="360" /></li>
           <li><img src="./images/gallery/img-2.jpg" alt="" width="270" height="360" /></li>
           <li><img src="./images/gallery/img-3.jpg" alt="" width="270" height="360" /></li>
@@ -167,11 +203,11 @@
         </ul>
       </section>
       <!-- Booking section -->
-      <section><h2>Online-booking</h2></section>
+      <section><h2 class="section-title">Online-booking</h2></section>
       <!-- Contacts section -->
       <section id="contacts">
-        <h2>Contacts</h2>
-        <ul>
+        <h2 class="section-title">Contacts</h2>
+        <ul class="list">
           <li><a href="">st. Vasylkivska, 7A Kiev, 08132</a></li>
           <li><a href="tel:+380441111111">+38 044 111 11 11</a></li>
           <li><a href="mailto:barbershop@email.com">barbershop@email.com</a></li>
@@ -184,12 +220,24 @@
     <!-- Footer section -->
     <footer>
       <p>Copyright 2023</p>
-      <ul>
-        <li>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <ul class="media-list list">
+        <li class="media-list-item">
+          <a
+            class="media-list-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
         </li>
-        <li>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a>
+        <li class="media-list-item">
+          <a
+            class="media-list-link"
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Youtube</a
+          >
         </li>
       </ul>
     </footer>
