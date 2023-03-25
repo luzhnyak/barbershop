@@ -5,6 +5,31 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
 }
@@ -12,25 +37,48 @@ body {
 .link {
   text-decoration: none;
 }
-/* ------------------------------- COMPONENTS -----------------------------*/
+
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* ===================== COMPONENTS =====================*/
 
 .modal-btn {
+  min-width: 160px;
+  padding: 12px 10px 12px 10px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
-  /* color: #FFFFFF; */
+  border: 1px solid #ff6c00;
+  background-color: transparent;
+  border-radius: 25px;
+  /* color: #ffffff; */
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: var(--accent-color);
   color: #ffffff;
+}
+
+.media-list {
+  display: flex;
+  gap: 40px;
+}
+
+.media-list::before {
+  content: '———';
 }
 
 .media-list-link {
@@ -52,6 +100,11 @@ body {
   font-size: 11px;
   line-height: 1.36px;
   text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.suptitle::before {
+  content: '———';
 }
 
 .suptitle-theme-dark {
@@ -76,12 +129,48 @@ body {
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
-
-  color: #303030;
 }
-/* ------------------------------- /COMPONENTS -----------------------------*/
 
-/* ------------------------------- HEADER -----------------------------*/
+.section-title-theme-light {
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+
+.section-title-theme-dark {
+  color: #303030;
+  padding-bottom: 44px;
+}
+
+/* ===================== /COMPONENTS =====================*/
+
+/* ===================== HEADER =====================*/
+.page-header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.page-header-container {
+  display: flex;
+  align-items: center;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 71px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 30px;
+}
 
 .menu-link {
   font-weight: 600;
@@ -102,7 +191,8 @@ body {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-
+  margin-left: auto;
+  margin-right: 30px;
   /* color: #FFFFFF; */
 }
 
@@ -111,9 +201,9 @@ body {
   color: var(--accent-color);
 }
 
-/* ------------------------------- /HEADER -----------------------------*/
+/* ===================== /HEADER =====================*/
 
-/* ------------------------------- /HERO -----------------------------*/
+/* ===================== /HERO =====================*/
 
 .main-title {
   font-family: 'Raleway', sans-serif;
@@ -125,4 +215,168 @@ body {
   /* color: #FFFFFF; */
 }
 
-/* ------------------------------- /HERO -----------------------------*/
+/* ===================== /HERO =====================*/
+
+/* ===================== ABOUT =====================*/
+
+.about-section-wraper {
+  display: flex;
+  gap: 30px;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+/* ===================== /ABOUT =====================*/
+
+/* ===================== PRICE =====================*/
+
+.price-section {
+  background: #111319;
+}
+
+.price-content-wraper {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===================== /PRICE =====================*/
+
+/* ===================== BENEFITS =====================*/
+
+.benefits-container {
+  display: flex;
+}
+
+/* ===================== /BENEFITS =====================*/
+
+/* ===================== /TEAM =====================*/
+
+.team-section {
+  background: #f7f7f7;
+}
+
+.team-title {
+  padding-bottom: 44px;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.team-card {
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.team-card-content-wraper {
+  padding-top: 30px;
+}
+
+.team-card-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #303030;
+  margin-bottom: 3px;
+}
+
+.team-card-text {
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #ff6c00;
+}
+
+/* ===================== /TEAM =====================*/
+
+/* ===================== /GALLERY =====================*/
+
+.gallery-suptitle {
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gallery-item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
+/* ===================== /GALLERY =====================*/
+
+/* ===================== CONTACTS =====================*/
+.booking-section {
+  width: 50%;
+}
+
+.contacts-section {
+  background-image: url('../images/contacts/bg-img.png');
+  width: 50%;
+  padding-left: 100px;
+}
+
+.contacts-list {
+  padding-bottom: 72px;
+}
+
+.contacts-item {
+  padding-bottom: 20px;
+}
+
+.cintacts-item-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  align-items: center;
+  letter-spacing: 0.02em;
+
+  color: #9da4bd;
+}
+
+.working-time-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+/* ===================== /CONTACTS =====================*/
+
+/* ===================== FOOTER =====================*/
+
+.supfooter {
+  background: #111319;
+}
+
+.supfooter-wraper {
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.footer-section {
+  display: flex;
+  padding-top: 52px;
+  padding-bottom: 52px;
+  justify-content: space-between;
+}
+
+.footer-copirate {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9da4bd;
+}
+
+/* ===================== /FOOTER =====================*/
