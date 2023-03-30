@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbersop</title>
 
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icon/favicon.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -51,8 +53,8 @@
 
     <main>
       <!-- Hero section -->
-      <section class="hero-section section">
-        <div class="container">
+      <section class="hero-section">
+        <div class="hero-container container">
           <div class="hero-left-side">
             <ul class="media-list list">
               <li class="media-list-item">
@@ -76,18 +78,20 @@
             </ul>
           </div>
           <div class="hero-right-side">
-            <p class="suptitle">A hair salon for men in Kyiv</p>
-            <h1 class="main-title">BarberShop</h1>
-            <p class="section-description">
-              We are experts in trendy men's haircuts. We work quickly, carefully and with style.
-            </p>
+            <div class="hero-content-wraper">
+              <p class="suptitle suptitle-theme-light">A hair salon for men in Kyiv</p>
+              <h1 class="main-title">BarberShop</h1>
+              <p class="hero-description">
+                We are experts in trendy men's haircuts. We work quickly, carefully and with style.
+              </p>
+            </div>
             <!-- Slider controls -->
-            <ul class="list">
-              <li>
-                <button type="button">Back</button>
+            <ul class="slider-btn-list list">
+              <li class="slider-item">
+                <button class="slider-btn" type="button">Back</button>
               </li>
-              <li>
-                <button type="button">Forward</button>
+              <li class="slider-item">
+                <button class="slider-btn" type="button">Forward</button>
               </li>
             </ul>
           </div>
@@ -129,9 +133,9 @@
               are a team that is always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
+            <button class="modal-btn" type="button">Online-booking</button>
           </div>
         </div>
-        <button class="modal-btn" type="button">Online-booking</button>
       </section>
 
       <!-- Price section -->
@@ -140,7 +144,7 @@
           <p class="suptitle suptitle-theme-light">Spend your time with the best masters</p>
           <h2 class="section-title section-title-theme-light">Services and prices</h2>
           <div class="price-content-wraper">
-            <table>
+            <table class="prise-table">
               <tr>
                 <td>Men’s haircut</td>
                 <td>from 300 uah.</td>
@@ -159,7 +163,7 @@
               </tr>
             </table>
 
-            <table>
+            <table class="prise-table">
               <tr>
                 <td>Trainee’s haircut</td>
                 <td>from 50 uah.</td>
@@ -185,9 +189,9 @@
       <!-- Benefits section -->
       <section class="benefits-section section">
         <div class="container benefits-container">
-          <ul class="benefits-list">
+          <ul class="benefits-list list">
             <li class="benefits-item">
-              <p class="benefits-item-title">600 <sup>+</sup></p>
+              <p class="benefits-item-title">600<sup>+</sup></p>
               <p class="benefits-item-text">Satisfied customers per day</p>
             </li>
             <li class="benefits-item">
@@ -199,8 +203,8 @@
               <p class="benefits-item-text">Kyiv's best professional barbers</p>
             </li>
             <li class="benefits-item">
-              <p class="benefits-item-title">100<sup>+</sup>Gifts for regular customers</p>
-              <p class="benefits-item-text"></p>
+              <p class="benefits-item-title">100<sup>+</sup></p>
+              <p class="benefits-item-text">Gifts for regular customers</p>
             </li>
           </ul>
           <div class="benefits-content-wraper">
@@ -217,7 +221,7 @@
       <!-- Team section -->
       <section id="team" class="team-section section">
         <div class="container">
-          <p class="suptitle">For true enjoyers of the atmosphere</p>
+          <p class="suptitle suptitle-theme-dark">For true enjoyers of the atmosphere</p>
           <h2 class="section-title section-title-theme-dark team-title">Our barbers</h2>
           <ul class="team-list list">
             <li class="team-card">

@@ -118,13 +118,20 @@ img {
   content: '';
   width: 60px;
   height: 1px;
-  background-color: var(--dark-color);
 }
 
 .suptitle-theme-dark {
   color: var(--dark-color);
 }
 .suptitle-theme-light {
+  color: rgba(157, 164, 189, 0.6);
+}
+.suptitle-theme-dark::before {
+  background-color: var(--dark-color);
+  color: var(--dark-color);
+}
+.suptitle-theme-light::before {
+  background-color: rgba(157, 164, 189, 0.6);
   color: rgba(157, 164, 189, 0.6);
 }
 
@@ -160,8 +167,8 @@ img {
 
 /* ===================== HEADER =====================*/
 .page-header {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 22px;
+  /* padding-bottom: 32px; */
 }
 
 .page-header-container {
@@ -219,6 +226,36 @@ img {
 /* ===================== /HEADER =====================*/
 
 /* ===================== /HERO =====================*/
+.hero-container {
+  display: flex;
+}
+
+.hero-left-side {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  transform: rotate(-90deg) translateX(-130px);
+  /* background-color: pink; */
+  width: 100px;
+  height: 100px;
+}
+
+.hero-right-side {
+  background-color: var(--dark-color);
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+    url('../images/hero/bg.jpg');
+  background-size: cover;
+
+  flex-grow: 1;
+  /* flex-basis: 100%; */
+  padding-top: 172px;
+  padding-bottom: 40px;
+  padding-left: 100px;
+}
+
+.hero-content-wraper {
+  width: 444px;
+}
 
 .main-title {
   font-family: 'Raleway', sans-serif;
@@ -226,8 +263,50 @@ img {
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
+  color: var(--white-color);
+}
 
-  /* color: #FFFFFF; */
+.hero-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+  margin-bottom: 144px;
+}
+
+.slider-btn-list {
+  display: flex;
+  justify-content: right;
+}
+
+.slider-btn {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--white-color);
+  color: var(--white-color);
+  width: 60px;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 8px;
+  margin-right: 20px;
+}
+
+.slider-item:last-child .slider-btn {
+  text-align: right;
+}
+
+.slider-btn:hover,
+.slider-btn:focus {
+  border-bottom: 1px solid var(--light-color);
+  color: var(--light-color);
 }
 
 /* ===================== /HERO =====================*/
@@ -253,6 +332,7 @@ img {
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 42px;
 }
 
 /* ===================== /ABOUT =====================*/
@@ -274,6 +354,46 @@ img {
 
 .benefits-container {
   display: flex;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.benefits-item {
+  background: #f7f7f7;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  flex-basis: 170px;
+  padding: 20px 24px;
+  margin-left: 30px;
+}
+
+.benefits-item-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+
+.benefits-item-title sup {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: center;
+  color: #ff6c00;
+  padding-top: -10px;
+  margin-top: -10px;
+}
+
+.benefits-item-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: #303030;
+  text-align: center;
 }
 
 /* ===================== /BENEFITS =====================*/
