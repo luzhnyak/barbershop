@@ -51,6 +51,7 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  /* outline: 1px solid #ff6c00; */
 }
 /* ===================== COMPONENTS =====================*/
 
@@ -241,12 +242,14 @@ img {
 
 .hero-left-side {
   display: flex;
-  justify-content: right;
+  /* justify-content: right; */
   align-items: center;
-  transform: rotate(-90deg) translateX(-130px);
+  margin-bottom: 40px;
+  transform: rotate(-90deg);
   /* background-color: pink; */
   width: 100px;
   height: 100px;
+  align-self: flex-end;
 }
 
 .hero-right-side {
@@ -362,27 +365,63 @@ img {
   margin-bottom: 44px;
 }
 
-.price-content-wraper {
+.price-list {
   display: flex;
   justify-content: center;
   gap: 30px;
   margin-bottom: 44px;
 }
 
-.price-card {
+.price-list-item {
   flex-basis: calc((100% - 30px) / 2);
   color: var(--light-color);
   padding: 20px 20px;
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.price-list:first-child {
   background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 
-.price-card tr {
-  height: 50px;
+.price-card {
+  /* width: 100%; */
+  /* border: 1px solid #000; */
 }
 
-.price-card tr td:last-child {
-  text-align: right;
+.price-card-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
 }
+
+.price-card-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.price-card-item::before {
+  content: '';
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.2);
+
+  flex-grow: 1;
+}
+
+.price-card-item-service {
+  order: -1;
+}
+
+/* .price-card tr td:last-child {
+  text-align: right;
+} */
+
+.blocks {
+  display: flex;
+}
+
+.block2 {
+  order: -1;
+}
+
 /* ===================== /PRICE =====================*/
 
 /* ===================== BENEFITS =====================*/
@@ -524,6 +563,21 @@ img {
 /* ===================== /GALLERY =====================*/
 
 /* ===================== CONTACTS =====================*/
+
+.supfooter {
+  background: #111319;
+  background-image: url('../images/contacts/bg-img.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center left calc(50% + 408px);
+}
+
+.supfooter-wraper {
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+}
+
 .booking-section {
   width: 50%;
 }
@@ -577,7 +631,6 @@ img {
 }
 
 .contacts-section {
-  background-image: url('../images/contacts/bg-img.png');
   width: 50%;
   padding-left: 100px;
 }
@@ -611,16 +664,6 @@ img {
 /* ===================== /CONTACTS =====================*/
 
 /* ===================== FOOTER =====================*/
-
-.supfooter {
-  background: #111319;
-}
-
-.supfooter-wraper {
-  display: flex;
-  justify-content: space-between;
-  gap: 0;
-}
 
 .footer-section {
   display: flex;
