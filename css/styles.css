@@ -56,6 +56,7 @@ img {
 /* ===================== COMPONENTS =====================*/
 
 .modal-btn {
+  display: block;
   min-width: 160px;
   padding: 12px 10px 12px 10px;
   font-weight: 600;
@@ -356,6 +357,9 @@ img {
 /* ===================== PRICE =====================*/
 
 .price-section {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #111319;
   background-image: url('../images/price/bg.png');
   background-size: cover;
@@ -375,23 +379,23 @@ img {
 .price-list-item {
   flex-basis: calc((100% - 30px) / 2);
   color: var(--light-color);
-  padding: 20px 20px;
+  padding: 30px 20px;
   background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
-.price-list:first-child {
+.price-list-item:first-child {
   background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
-}
-
-.price-card {
-  /* width: 100%; */
-  /* border: 1px solid #000; */
 }
 
 .price-card-item {
   display: flex;
   align-items: baseline;
   gap: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
 }
 
 .price-card-item:not(:last-child) {
@@ -410,16 +414,9 @@ img {
   order: -1;
 }
 
-/* .price-card tr td:last-child {
-  text-align: right;
-} */
-
-.blocks {
-  display: flex;
-}
-
-.block2 {
-  order: -1;
+.price-section .modal-btn {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===================== /PRICE =====================*/
@@ -428,15 +425,31 @@ img {
 
 .benefits-container {
   display: flex;
+  gap: 30px;
+}
+
+.benefits-left-side {
+  width: 570px;
+  /* outline: 1px solid #ff6c00; */
+}
+
+.benefits-right-side {
+  width: 500px;
 }
 
 .benefits-list {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
-  /* width: 400px; */
-  /* padding-left: 30px;
-  padding-right: 30px; */
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  /* gap: 30px; */
+  width: 370px;
+}
+
+.benefits-item:nth-child(2n) {
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 .benefits-item {
@@ -444,10 +457,16 @@ img {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   flex-basis: 170px;
   padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   /* margin-left: 30px; */
 }
 
 .benefits-item-title {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
@@ -456,14 +475,16 @@ img {
   color: #303030;
 }
 
-.benefits-item-title sup {
+.benefits-item-title::after {
+  position: absolute;
+  content: '+';
+  top: 7px;
+  right: -10px;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.38;
   text-align: center;
   color: #ff6c00;
-  padding-top: -10px;
-  margin-top: -10px;
 }
 
 .benefits-item-text {
@@ -640,18 +661,24 @@ img {
 }
 
 .contacts-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
   padding-bottom: 20px;
 }
 
-.cintacts-item-link {
+.contacts-item-link {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   align-items: center;
   letter-spacing: 0.02em;
-
   color: var(--light-color);
+}
+
+.contacts-item:first-child .contacts-item-link {
+  font-weight: 700;
 }
 
 .working-time-text {
@@ -659,6 +686,10 @@ img {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: var(--light-color);
+}
+
+.contacts-icon {
+  fill: currentColor;
 }
 
 /* ===================== /CONTACTS =====================*/
